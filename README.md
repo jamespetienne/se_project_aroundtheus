@@ -2,10 +2,10 @@
 
 This project contains HTML and CSS files for a website showcasing various locations around the United States.
 
-![Desktop](../Screenshots/ATUS%20Desktop.png)
-![Tablet](../Screenshots/ATUS%20Tablet.png)
-![Mobile](../Screenshots/ATUS%20Mobile.png)
-![Responsive-Website](../Screenshots/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
+![Desktop](./images/Demo/ATUS%20Desktop.png)
+![Tablet](./images/Demo/ATUS%20Tablet.png)
+![Mobile](./images/Demo/ATUS%20Mobile.png)
+![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
 
 ## Files Included
 
