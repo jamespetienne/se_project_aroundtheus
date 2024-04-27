@@ -1,21 +1,48 @@
-# Project 3: Around The U.S.
+# Around the U.S.
 
-### Overview  
+This project contains HTML and CSS files for a website showcasing various locations around the United States.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)  
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+![Desktop](../Screenshots/ATUS%20Desktop.png)
+![Tablet](../Screenshots/ATUS%20Tablet.png)
+![Mobile](../Screenshots/ATUS%20Mobile.png)
+![Responsive-Website](../Screenshots/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
+
+## Files Included
+
+- **index.html**: The main HTML file containing the structure of the website.
+- **index.css**: The main CSS file containing styles for the website layout and components.
+- **vendor**: Directory containing external CSS files imported into the project.
+  - `normalize.css`: CSS file for normalizing styles across different browsers.
+  - `font.css`: CSS file for importing custom fonts.
+- **blocks**: Directory containing CSS files for different components of the website.
+  - `page.css`: CSS file defining styles for the main page layout.
+  - `header.css`: CSS file defining styles for the header section.
+  - `profile.css`: CSS file defining styles for the profile section.
+  - `gallery.css`: CSS file defining styles for the gallery section.
+  - `card.css`: CSS file defining styles for individual cards in the gallery.
+  - `footer.css`: CSS file defining styles for the footer section.
+
+## Usage
+
+Simply open the `index.html` file in a web browser to view the website. All styles are included within the CSS files, and images are referenced relatively within the HTML.
+
+## Features
+
+- Responsive design: The website layout adjusts based on the screen size, ensuring a consistent user experience across devices.
+- Profile section: Displays information about a featured individual, including their name, description, and a profile picture.
+- Gallery section: Showcases multiple locations with images and titles.
+- Like button: Each card in the gallery has a like button for user interaction.
+- Semantic HTML5
+- Grid
+- Flexbox
+- Media Queries
+
+## More About Website Video
+
+- https://drive.google.com/file/d/1N__9t-Vyos5CVQD-0OYqRdsSzhgrFRq4/view?usp=drive_link
+
+## Credits
+
+- **Around The U.S.**: © 2022 Around The U.S. - Original concept and design.
+- **Normalize.css**: [Normalize.css](https://github.com/necolas/normalize.css) - A modern, HTML5-ready alternative to CSS resets.
+- **Inter Font**: [Inter](https://rsms.me/inter/) - The font used for text elements in the project.

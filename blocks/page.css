@@ -1,0 +1,35 @@
+.page {
+  background-color: black;
+  color: white;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.page__section {
+  max-width: 880px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page__content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 930px) {
+  .page__section {
+    max-width: calc(100% - 40px);
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page__section {
+    margin: 0;
+    padding: 0;
+  }
+}
