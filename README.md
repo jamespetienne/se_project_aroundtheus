@@ -2,11 +2,6 @@
 
 This project contains HTML and CSS files for a website showcasing various locations around the United States.
 
-![Desktop](./images/Demo/ATUS%20Desktop.png)
-![Tablet](./images/Demo/ATUS%20Tablet.png)
-![Mobile](./images/Demo/ATUS%20Mobile.png)
-![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
-
 ## Files Included
 
 - **index.html**: The main HTML file containing the structure of the website.
@@ -36,6 +31,13 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 - Grid
 - Flexbox
 - Media Queries
+  ![Desktop](./images/Demo/ATUS%20Desktop.png =200x)
+  ![Tablet](./images/Demo/ATUS%20Tablet.png =200x)
+  ![Mobile](./images/Demo/ATUS%20Mobile.png =200x)
+
+## Responsive
+
+![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif =200x)
 
 ## More About Website Video
 
