@@ -32,6 +32,7 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 - Flexbox
 - Media Queries
   ![Desktop](./images/Demo/ATUS%20Desktop.png | width=100)
+  <img src="images/Demo/ATUS Desktop.png" width="100">
   ![Tablet](./images/Demo/ATUS%20Tablet.png | width=100)
   ![Mobile](./images/Demo/ATUS%20Mobile.png | width=100)
 
