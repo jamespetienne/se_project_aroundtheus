@@ -31,13 +31,13 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 - Grid
 - Flexbox
 - Media Queries
-  ![Desktop](./images/Demo/ATUS%20Desktop.png =200x)
-  ![Tablet](./images/Demo/ATUS%20Tablet.png =200x)
-  ![Mobile](./images/Demo/ATUS%20Mobile.png =200x)
+  ![Desktop](./images/Demo/ATUS%20Desktop.png | width=100)
+  ![Tablet](./images/Demo/ATUS%20Tablet.png | width=100)
+  ![Mobile](./images/Demo/ATUS%20Mobile.png | width=100)
 
 ## Responsive
 
-![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif =200x)
+![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif | width=100)
 
 ## More About Website Video
 
