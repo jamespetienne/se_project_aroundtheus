@@ -32,11 +32,20 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 - Flexbox
 - Media Queries
 
-  <img src="images/Demo/ATUS Desktop.png" width="500"><img src="images/Demo/ATUS Tablet.png" width="500"><img src="images/Demo/ATUS Mobile.png" width="500">
+## Webpage Views
 
-## Responsive
+- ### Desktop
 
-![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif | width=100)
+  <img src="images/Demo/ATUS Desktop.png" width="500">
+
+- ### Tablet
+  <img src="images/Demo/ATUS Tablet.png" width="500">
+- ### Mobile
+  <img src="images/Demo/ATUS Mobile.png" width="200">
+
+## Responsive Design
+
+![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
 
 ## More About Website Video
 
