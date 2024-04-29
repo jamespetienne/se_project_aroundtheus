@@ -30,7 +30,6 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 373px;
-  min-height: 48px;
   margin: 0;
 }
 
@@ -50,7 +49,7 @@
 }
 
 .profile__description {
-  font: regular 400 18px/1.2 Inter, Arial, Helvetica, sans-serif;
+  font: 400 18px/1.2 Inter, Arial, Helvetica, sans-serif;
   grid-area: description;
   margin: 0;
   text-overflow: ellipsis;
@@ -86,7 +85,7 @@
   }
 
   .profile__description {
-    font: regular 400 14px/1.21 Inter, Arial, Helvetica, sans-serif;
+    font: 400 14px/1.21 Inter, Arial, Helvetica, sans-serif;
   }
 
   .profile__add-button {
@@ -116,9 +115,6 @@
     height: 18px;
     width: 18px;
   }
-  .profile__description {
-    font: regular 400 14px/1.21 Inter, Arial, Helvetica, sans-serif;
-  }
 }
 
 @media screen and (max-width: 570px) {
@@ -137,24 +133,27 @@
 
   .profile__info {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
     min-height: 50px;
     margin-top: 30px;
+    align-items: center;
   }
 
   .profile__title {
     font: 500 22px/1.21 Inter, Arial, Helvetica, sans-serif;
   }
+
   .profile__edit-button {
     margin-left: 10px;
     margin-bottom: 14px;
+    flex-shrink: 0;
   }
+
   .profile__description {
     width: 100%;
     text-align: center;
-    font: 400 14px/1.21 Inter, Arial, Helvetica, sans-serif;
     margin: 14px 0 0;
   }
 
