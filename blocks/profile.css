@@ -136,6 +136,7 @@
     flex-wrap: wrap;
     max-width: 100%;
     justify-content: center;
+    margin: auto;
   }
 
   .profile__title {
