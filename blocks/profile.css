@@ -133,7 +133,7 @@
 
   .profile__info {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 50px;
