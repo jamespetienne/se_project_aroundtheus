@@ -135,6 +135,9 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
+    grid-template-areas:
+      "title button"
+      "description description";
   }
 
   .profile__title {
