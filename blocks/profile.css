@@ -121,9 +121,8 @@
   .profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: ;
     margin: 0 auto;
-    align-items: flex-start;
   }
   .profile__image {
     display: block;
@@ -137,6 +136,7 @@
     flex-wrap: wrap;
     max-width: 100%;
     justify-content: center;
+    margin-top: 30px;
   }
 
   .profile__title {
@@ -148,6 +148,7 @@
     margin: 0 10px 0;
     padding: 0;
     flex-shrink: 0;
+    align-items: baseline;
   }
 
   .profile__description {
