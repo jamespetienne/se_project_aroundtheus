@@ -136,11 +136,11 @@
     flex-wrap: wrap;
     max-width: 100%;
     justify-content: center;
-    gap: 20px;
   }
 
   .profile__title {
     font: 500 22px/1.21 Inter, Arial, Helvetica, sans-serif;
+    margin-right: 10px;
   }
 
   .profile__edit-button {
