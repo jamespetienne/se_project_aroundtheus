@@ -121,7 +121,7 @@
   .profile {
     display: flex;
     flex-direction: column;
-    justify-content: ;
+    justify-content: center;
     margin: 0 auto;
   }
   .profile__image {
@@ -141,6 +141,7 @@
 
   .profile__title {
     font: 500 22px/1.21 Inter, Arial, Helvetica, sans-serif;
+    max-width: 230px;
     margin: 0;
   }
 
@@ -148,7 +149,6 @@
     margin-left: 10px;
     padding: 0;
     flex-shrink: 0;
-    align-items: baseline;
   }
 
   .profile__description {
@@ -165,10 +165,3 @@
     min-width: 100%;
   }
 }
-/* 
-display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    justify-content: center;
-    margin-top: 30px;
-    */
