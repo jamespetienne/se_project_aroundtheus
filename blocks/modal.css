@@ -10,7 +10,7 @@
   padding: 0 19px;
 }
 
-.modal__opened {
+.modal_opened {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,6 @@
 }
 
 .modal__button {
-  width: 358px;
   height: 50.15px;
   border: none;
   margin-top: 40px;
