@@ -36,6 +36,7 @@
           <button
             class="profile__add-button"
             type="button"
+            id="modal-add-button"
             aria-label=""
           ></button>
         </section>
@@ -47,6 +48,8 @@
         <p class="footer__text">© 2022 Around The U.S.</p>
       </footer>
     </div>
+
+    <!-- Edit Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -77,8 +80,52 @@
       </div>
     </div>
 
+    <!-- Add Card Modal -->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="modal-add-close"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">New Place</h2>
+        <form class="modal__form" id="add-card-form">
+          <input
+            type="text"
+            class="modal__input modal__input_type_title"
+            id="profile-title-input"
+            name="title"
+            placeholder="Title"
+            required
+          />
+          <input
+            type="text"
+            class="modal__input modal__input_type_url"
+            id="profile-url-input"
+            name="url"
+            placeholder="Image URL"
+            required
+          />
+          <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Preview Image Modal -->
+    <div id="preview-image-modal" class="preview__modal">
+      <div class="preview__modal-container">
+        <button
+          type="button"
+          class="preview__modal-close-button"
+          id="preview-image-close"
+        ></button>
+        <img class="preview__modal-image" src="" alt="" id="preview-image" />
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
+        <button class="card__trash-button" type="button" aria-label=""></button>
         <img src="" alt="" class="card__image" />
         <div class="card__description">
           <h2 class="card__title"></h2>
