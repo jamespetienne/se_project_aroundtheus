@@ -6,17 +6,15 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  display: none;
-  padding: 0 19px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.modal_opened {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s linear;
+}
+
+.modal_opened {
   opacity: 1;
   visibility: visible;
 }
@@ -24,17 +22,28 @@
 .modal__container {
   background-color: #fff;
   padding: 36px;
-  margin: 195px auto auto;
   border-radius: 10px;
   position: relative;
   max-width: 430px;
   max-height: 330px;
 }
 
+.modal__container_preview {
+  position: relative;
+  max-width: 75vw;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px;
+}
+
 .modal__close {
   width: 40px;
   height: 40px;
-  background-image: url("../images/Close\ Icon.svg");
+  background-image: url("../images/close-icon.svg");
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -42,12 +51,12 @@
   position: absolute;
   bottom: calc(100% + 5px);
   left: calc(100% + 5px);
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .modal__close:hover {
   opacity: 0.6;
-  transition: opacity 0.3s;
-  cursor: pointer;
 }
 
 .modal__heading {
@@ -81,30 +90,45 @@
   border: none;
   margin-top: 40px;
   padding: 0;
-  border: none;
   border-radius: 2px;
   color: #fff;
   background: #000;
   font: 400 18px/21.78px Inter, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .modal__button:hover {
   opacity: 0.8;
-  transition: opacity 0.3s;
-  cursor: pointer;
+}
+
+.preview__modal-image {
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  position: relative;
+}
+
+.preview__modal-caption {
+  margin-top: 10px;
+  font: 400 12px/14.52px Inter, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
 }
 
 @media screen and (max-width: 555px) {
   .modal__container {
     max-width: 282px;
     padding: 25px 22px;
-    margin-top: 123px;
   }
+
   .modal__close {
     width: 26px;
     height: 26px;
-    bottom: calc(100% + 20px);
-    left: calc(86% + 5px);
+    top: 10px;
+    right: 10px;
   }
 
   .modal__heading {
@@ -119,8 +143,6 @@
   }
 
   .modal__button {
-    width: 100%;
-    padding: 0;
     height: 46px;
     font: 400 14px/16.94px Inter, Arial, Helvetica, sans-serif;
   }

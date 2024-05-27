@@ -29,7 +29,7 @@
               class="profile__edit-button"
               id="profile-edit-button"
               type="button"
-              aria-label="close"
+              aria-label="edit"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
@@ -37,7 +37,7 @@
             class="profile__add-button"
             type="button"
             id="modal-add-button"
-            aria-label=""
+            aria-label="add"
           ></button>
         </section>
         <section class="gallery page__section">
@@ -93,46 +93,51 @@
           <input
             type="text"
             class="modal__input modal__input_type_title"
-            id="profile-title-input"
+            id="card-title-input"
             name="title"
             placeholder="Title"
             required
           />
           <input
-            type="text"
+            type="url"
             class="modal__input modal__input_type_url"
-            id="profile-url-input"
+            id="card-url-input"
             name="url"
             placeholder="Image URL"
             required
           />
-          <button class="modal__button" type="submit">Save</button>
+          <button class="modal__button" type="submit">Create</button>
         </form>
       </div>
     </div>
 
     <!-- Preview Image Modal -->
-    <div id="preview-image-modal" class="preview__modal">
-      <div class="preview__modal-container">
+    <div id="preview-image-modal" class="modal">
+      <div class="modal__container modal__container_preview">
         <button
           type="button"
-          class="preview__modal-close-button"
+          class="modal__close"
           id="preview-image-close"
         ></button>
         <img class="preview__modal-image" src="" alt="" id="preview-image" />
+        <p class="preview__modal-caption" id="preview-image-caption"></p>
       </div>
     </div>
 
     <template id="card-template">
       <li class="card">
-        <button class="card__trash-button" type="button" aria-label=""></button>
+        <button
+          class="card__trash-button"
+          type="button"
+          aria-label="delete"
+        ></button>
         <img src="" alt="" class="card__image" />
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button
             class="card__like-button"
             type="button"
-            aria-label=""
+            aria-label="like"
           ></button>
         </div>
       </li>
