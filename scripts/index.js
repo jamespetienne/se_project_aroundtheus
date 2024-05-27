@@ -55,17 +55,10 @@ const previewImageClose = document.querySelector("#preview-image-close");
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
-  modal.addEventListener("transitionend", function onTransitionEnd() {
-    modal.style.display = "none";
-    modal.removeEventListener("transitionend", onTransitionEnd);
-  });
 }
 
 function openPopup(modal) {
-  modal.style.display = "flex";
-  requestAnimationFrame(() => {
-    modal.classList.add("modal_opened");
-  });
+  modal.classList.add("modal_opened");
 }
 
 function getCardElement(cardData) {

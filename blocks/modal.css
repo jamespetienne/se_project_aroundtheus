@@ -37,7 +37,11 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  padding: 10px;
+  padding: ;
+}
+.preview__modal-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .modal__close {
@@ -127,8 +131,8 @@
   .modal__close {
     width: 26px;
     height: 26px;
-    top: 10px;
-    right: 10px;
+    bottom: calc(100% + 20px);
+    left: calc(100% + -25px);
   }
 
   .modal__heading {
@@ -145,5 +149,23 @@
   .modal__button {
     height: 46px;
     font: 400 14px/16.94px Inter, Arial, Helvetica, sans-serif;
+  }
+
+  .preview__modal-wrapper {
+    padding: 0;
+  }
+
+  #preview-image-close {
+    bottom: calc(100% + 5px);
+    left: calc(100% + 5px);
+    cursor: pointer;
+    transition: opacity 0.3s;
+    padding: 0;
+  }
+
+  .preview__modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
