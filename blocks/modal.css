@@ -169,3 +169,17 @@
     object-fit: contain;
   }
 }
+
+.modal__button_disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.modal__input_type_error {
+  border-color: red;
+}
+
+.modal__error_visible {
+  display: block;
+  color: red;
+}
