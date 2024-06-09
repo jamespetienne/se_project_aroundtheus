@@ -65,25 +65,29 @@
             id="profile-title-input"
             name="title"
             placeholder="Name"
-            required
             minlength="2"
             maxlength="40"
+            required
           />
-          <span class="modal__error" id="profile-title-input-error"></span>
+          <div class="modal__error-container">
+            <span class="modal__error" id="profile-title-input-error"></span>
+          </div>
           <input
             type="text"
             class="modal__input"
             id="profile-description-input"
             name="description"
             placeholder="Description"
-            required
             minlength="2"
             maxlength="200"
+            required
           />
-          <span
-            class="modal__error"
-            id="profile-description-input-error"
-          ></span>
+          <div class="modal__error-container">
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
+          </div>
           <button class="modal__button modal__button_disabled" type="submit">
             Save
           </button>
@@ -107,11 +111,14 @@
             id="card-title-input"
             name="title"
             placeholder="Title"
-            required
             minlength="1"
             maxlength="30"
+            required
           />
-          <span class="modal__error" id="card-title-input-error"></span>
+          <div class="modal__error-container">
+            <span class="modal__error" id="card-title-input-error"></span>
+          </div>
+
           <input
             type="url"
             class="modal__input modal__input_type_url"
@@ -120,7 +127,9 @@
             placeholder="Image URL"
             required
           />
-          <span class="modal__error" id="card-url-input-error"></span>
+          <div class="modal__error-container">
+            <span class="modal__error" id="card-url-input-error"></span>
+          </div>
           <button class="modal__button modal__button_disabled" type="submit">
             Create
           </button>

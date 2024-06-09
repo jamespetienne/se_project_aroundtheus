@@ -71,6 +71,8 @@
 }
 
 .modal__form {
+  max-height: 220px;
+  overflow-y: auto;
 }
 
 .modal__input {
@@ -171,7 +173,10 @@
 }
 
 .modal__button_disabled {
-  background-color: #b3b3b3;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  color: #00000020;
+  background: #00000000;
   cursor: not-allowed;
 }
 
@@ -180,6 +185,26 @@
 }
 
 .modal__error_visible {
+  font: 400 12px/14.52px Inter, Arial, Helvetica, sans-serif;
   display: block;
+  color: rgb(255, 0, 0);
+}
+
+.modal__error-container {
+  position: relative;
+}
+
+.modal__error {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   color: red;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.modal__error_active {
+  opacity: 1;
 }

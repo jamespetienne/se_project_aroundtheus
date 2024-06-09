@@ -82,3 +82,35 @@ enableValidation({
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("edit-profile-form", "add-card-form");
+
+  form.addEventListener("input", (event) => {
+    const input = event.target;
+    if (input.validity.valid) {
+      document
+        .getElementById(`${input.id}-error`)
+        .classList.remove("modal__error_active");
+    } else {
+      document
+        .getElementById(`${input.id}-error`)
+        .classList.add("modal__error_active");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("add-card-form");
+
+  form.addEventListener("input", (event) => {
+    const input = event.target;
+    const errorElement = document.getElementById(`${input.id}-error`);
+
+    if (input.validity.valid) {
+      errorElement.classList.remove("modal__error_active");
+    } else {
+      errorElement.classList.add("modal__error_active");
+    }
+  });
+});
