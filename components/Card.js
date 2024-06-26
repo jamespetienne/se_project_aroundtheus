@@ -1,4 +1,3 @@
-// components/Card.js
 export default class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
@@ -53,7 +52,6 @@ export default class Card {
     cardImage.src = this._link;
     cardImage.alt = this._name;
     this._setEventListeners();
-
     return this._element;
   }
 }
