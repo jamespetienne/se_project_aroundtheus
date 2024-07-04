@@ -180,7 +180,7 @@ import "../pages/index.css";
 
 // Function to handle image click and open popup
 const handleImageClick = (name, link) => {
-  imagePopup.open(name, link);
+  imagePopup.open({ name, link });
 };
 
 // Initialize Cards Section
