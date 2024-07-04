@@ -187,7 +187,7 @@
 .modal__error_visible {
   font: 400 12px/14.52px Inter, Arial, Helvetica, sans-serif;
   display: block;
-  color: rgb(255, 0, 0);
+  color: rgba(255, 0, 0);
 }
 
 .modal__error-container {
