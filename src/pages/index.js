@@ -40,10 +40,13 @@ cardSection.renderItems();
 const imagePopup = new PopupWithImage("#preview-image-modal");
 imagePopup.setEventListeners();
 
+const addCardForm = document.querySelector("#add-card-form");
 const addCardPopup = new PopupWithForm("#add-card-modal", (formData) => {
   const cardData = { name: formData.title, link: formData.url };
   const cardElement = createCard(cardData);
   cardSection.addItem(cardElement);
+  addCardForm.reset();
+  addCardFormValidator.resetValidation();
   addCardPopup.close();
 });
 addCardPopup.setEventListeners();
@@ -62,7 +65,10 @@ const userInfo = new UserInfo(profileSelectors);
 
 document.querySelector("#profile-edit-button").addEventListener("click", () => {
   const userData = userInfo.getUserInfo();
-  editProfilePopup.setInputValues(userData);
+  editProfilePopup.setInputValues({
+    title: userData.name,
+    description: userData.job,
+  });
   editProfilePopup.open();
 });
 
