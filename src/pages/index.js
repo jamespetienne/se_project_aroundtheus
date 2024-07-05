@@ -62,7 +62,7 @@ const userInfo = new UserInfo(profileSelectors);
 
 document.querySelector("#profile-edit-button").addEventListener("click", () => {
   const userData = userInfo.getUserInfo();
-  editProfilePopup.setInputValues(userData); // Use setInputValues method
+  editProfilePopup.setInputValues(userData);
   editProfilePopup.open();
 });
 
