@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +49,7 @@
       </footer>
     </div>
 
-    <!-- Edit Modal -->
+    Edit Modal 
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -94,7 +95,7 @@
       </div>
     </div>
 
-    <!-- Add Card Modal -->
+     Add Card Modal
     <div class="modal" id="add-card-modal">
       <div class="modal__container">
         <button
@@ -136,7 +137,7 @@
       </div>
     </div>
 
-    <!-- Preview Image Modal -->
+    Preview Image Modal 
     <div id="preview-image-modal" class="modal">
       <div
         class="modal__container modal__container_preview preview__modal-wrapper"
@@ -151,7 +152,7 @@
       </div>
     </div>
 
-    <!-- Card Template -->
+     Card Template 
     <template id="card-template">
       <li class="card">
         <button
@@ -167,6 +168,229 @@
             type="button"
             aria-label="like"
           ></button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Around the U.S.</title>
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          src="<%=require('./images/Logo.svg')%>"
+          alt="Around the U.S. Logo"
+          class="header__logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <div class="profile__avatar-container">
+            <img
+              src="<%=require('./images/jacques-cousteau.png')%>"
+              alt="Profile Picture"
+              class="profile__image"
+            />
+            <button class="profile__avatar-edit-button"></button>
+          </div>
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+            <button
+              class="profile__edit-button"
+              id="profile-edit-button"
+              type="button"
+              aria-label="edit"
+            ></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button
+            class="profile__add-button"
+            type="button"
+            id="modal-add-button"
+            aria-label="add"
+          ></button>
+        </section>
+        <section class="gallery page__section">
+          <ul class="gallery__cards"></ul>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__text">© 2022 Around The U.S.</p>
+      </footer>
+    </div>
+
+    <!-- Edit Profile Popup -->
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="profile-edit-close"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">Edit Profile</h2>
+        <form class="modal__form" id="edit-profile-form">
+          <input
+            type="text"
+            class="modal__input"
+            id="profile-title-input"
+            name="name"
+            placeholder="Name"
+            minlength="2"
+            maxlength="40"
+            required
+          />
+          <div class="modal__error-container">
+            <span class="modal__error" id="profile-title-input-error"></span>
+          </div>
+          <input
+            type="text"
+            class="modal__input"
+            id="profile-description-input"
+            name="description"
+            placeholder="Description"
+            minlength="2"
+            maxlength="200"
+            required
+          />
+          <div class="modal__error-container">
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
+          </div>
+          <button class="modal__button modal__button_disabled" type="submit">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add Card Popup -->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="modal-add-close"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">New Place</h2>
+        <form class="modal__form" id="add-card-form">
+          <input
+            type="text"
+            class="modal__input modal__input_type_title"
+            id="card-title-input"
+            name="name"
+            placeholder="Title"
+            minlength="1"
+            maxlength="30"
+            required
+          />
+          <div class="modal__error-container">
+            <span class="modal__error" id="card-title-input-error"></span>
+          </div>
+          <input
+            type="url"
+            class="modal__input modal__input_type_url"
+            id="card-url-input"
+            name="link"
+            placeholder="Image URL"
+            required
+          />
+          <div class="modal__error-container">
+            <span class="modal__error" id="card-url-input-error"></span>
+          </div>
+          <button class="modal__button modal__button_disabled" type="submit">
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Preview Popup -->
+    <div id="preview-image-modal" class="modal">
+      <div
+        class="modal__container modal__container_preview preview__modal-wrapper"
+      >
+        <button
+          type="button"
+          class="modal__close"
+          id="preview-image-close"
+        ></button>
+        <img class="preview__modal-image" src="" alt="" id="preview-image" />
+        <p class="preview__modal-caption" id="preview-image-caption"></p>
+      </div>
+    </div>
+
+    <!-- Edit Avatar Popup -->
+    <div class="modal modal_type_avatar" id="avatar-edit-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="avatar-edit-close"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">Change profile picture</h2>
+        <form class="modal__form" id="edit-avatar-form">
+          <input
+            type="url"
+            class="modal__input modal__input_type_avatar-link"
+            id="avatar-link-input"
+            name="avatar"
+            placeholder="Image link"
+            required
+          />
+          <div class="modal__error-container">
+            <span class="modal__error" id="avatar-link-input-error"></span>
+          </div>
+          <button class="modal__button modal__button_disabled" type="submit">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Popup -->
+    <div class="modal modal_type_delete" id="delete-confirmation-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="delete-confirmation-close"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">Are you sure?</h2>
+        <form class="modal__form" id="delete-confirmation-form">
+          <button class="modal__button" type="submit">Yes</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Card Template -->
+    <template id="card-template">
+      <li class="card">
+        <button
+          class="card__trash-button"
+          type="button"
+          aria-label="delete"
+        ></button>
+        <img src="" alt="" class="card__image" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <div class="card__like-container">
+            <button
+              class="card__like-button"
+              type="button"
+              aria-label="like"
+            ></button>
+            <span class="card__like-counter">0</span>
+          </div>
         </div>
       </li>
     </template>

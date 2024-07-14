@@ -10,6 +10,11 @@ import {
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import "../pages/index.css";
+import { api } from "./Api.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation";
+
+// Initialize API
+const api = new Api(apiConfig);
 
 // Function to handle image click and open popup
 const handleImageClick = (name, link) => {
@@ -88,3 +93,78 @@ const addCardFormValidator = new FormValidator(
   document.querySelector("#add-card-form")
 );
 addCardFormValidator.enableValidation();
+
+const deleteConfirmationPopup = new PopupWithConfirmation(
+  ".modal_type_delete",
+  () => {
+    return api.deleteCard(cardId).then(() => {
+      cardElement.remove();
+      cardElement = null;
+    });
+  }
+);
+
+deleteConfirmationPopup.setEventListeners();
+
+// API SECTION
+
+// Function to load user info and cards
+function loadPageData() {
+  Promise.all([api.getUserInfo(), api.getInitialCards()])
+    .then(([userData, initialCards]) => {
+      // Update user profile with fetched data
+      userInfo.setUserInfo(userData);
+      userInfo.setUserAvatar(userData.avatar);
+
+      // Render cards with fetched data
+      initialCards.forEach((cardData) => {
+        const card = createCard(cardData);
+        cardList.addItem(card);
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+// Call loadPageData on page load
+loadPageData();
+
+// Event listener for editing profile
+profileEditForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  const userData = {
+    name: profileNameInput.value,
+    about: profileAboutInput.value,
+  };
+
+  api
+    .editProfile(userData)
+    .then((updatedUserData) => {
+      userInfo.setUserInfo(updatedUserData);
+      profilePopup.close();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+// Event listener for adding a new card
+cardAddForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  const cardData = {
+    name: cardNameInput.value,
+    link: cardLinkInput.value,
+  };
+
+  api
+    .addCard(cardData)
+    .then((newCardData) => {
+      const card = createCard(newCardData);
+      cardList.addItem(card);
+      cardAddPopup.close();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});

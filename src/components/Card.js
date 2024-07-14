@@ -51,3 +51,39 @@ export default class Card {
     return this._element;
   }
 }
+
+// API SECTION
+
+_setEventListeners() {
+  this._likeButton.addEventListener('click', () => {
+    if (this._likeButton.classList.contains('card__like-button_active')) {
+      api.unlikeCard(this._id)
+        .then((updatedCardData) => {
+          this._handleLikeIcon(updatedCardData.likes.length);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
+      api.likeCard(this._id)
+        .then((updatedCardData) => {
+          this._handleLikeIcon(updatedCardData.likes.length);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  });
+
+  this._trashButton.addEventListener('click', () => {
+    this._handleDeleteCard();
+  });
+
+  this._cardImage.addEventListener('click', () => {
+    this._handleImageClick(this._name, this._link);
+  });
+}
+
+this._trashButton.addEventListener('click', () => {
+  deleteConfirmationPopup.open(this._id);
+});

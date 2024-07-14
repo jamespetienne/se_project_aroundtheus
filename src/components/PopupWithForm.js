@@ -31,3 +31,22 @@ export default class PopupWithForm extends Popup {
     });
   }
 }
+
+// API SECTION
+
+setEventListeners() {
+  super.setEventListeners();
+  this._form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const inputValues = this._getInputValues();
+
+    this._handleFormSubmit(inputValues)
+      .then(() => {
+        this.close();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+}
+
