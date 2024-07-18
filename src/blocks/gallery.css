@@ -1,17 +1,12 @@
+.gallery {
+  margin-top: 30px;
+}
 .gallery__cards {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
   grid-gap: 20px 17px;
-  margin: 51px 0 0;
   padding: 0;
-}
-
-@media screen and (max-width: 480px) {
-  .gallery {
-    margin: 0px auto;
-  }
-  .gallery__cards {
-    margin-top: 31px;
-  }
+  margin: 36px 0 0;
+  list-style-type: none;
 }
