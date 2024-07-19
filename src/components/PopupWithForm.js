@@ -18,6 +18,13 @@ export default class PopupWithForm extends Popup {
     return formInputs;
   }
 
+  setInputValues(data) {
+    this._inputList.forEach((input) => {
+      // Here you insert the `value` by the `name` of the input
+      input.value = data[input.name];
+    });
+  }
+
   setLoading(isLoading, loadingText = "Saving...") {
     if (isLoading) {
       this._submitButton.textContent = loadingText;

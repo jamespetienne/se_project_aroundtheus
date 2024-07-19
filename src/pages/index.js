@@ -113,6 +113,7 @@ function handleProfilePictureEdit(userData) {
     .then((userData) => {
       avatarFormElement.reset();
       profileImagePopupForm.close();
+      addFormValidator.disableButton();
       userInfo.setUserImage(userData.avatar);
     })
     .catch(console.error)
@@ -194,20 +195,21 @@ function handleDeleteClick(cardElement) {
 
 // Handle Like Click
 function handleLikeClick(cardElement) {
+  console.log("Like button clicked for card:", cardElement);
   if (cardElement.getLikes()) {
     api
       .fetchDisLikeCard(cardElement.getId())
       .then((res) => {
-        cardElement.renderLikes(res.isLiked);
-        cardElement._isLiked = res.isLiked;
+        cardElement.renderLikes(false);
+        cardElement.isLiked = res.isLiked;
       })
       .catch(console.error);
   } else {
     api
       .fetchLikeCard(cardElement.getId())
       .then((res) => {
-        cardElement.renderLikes(res.isLiked);
-        cardElement._isLiked = res.isLiked;
+        cardElement.renderLikes(true);
+        cardElement.isLiked = res.isLiked;
       })
       .catch(console.error);
   }

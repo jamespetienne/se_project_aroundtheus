@@ -5,9 +5,7 @@ export default class Api {
   }
 
   _request(url, options) {
-    return fetch(url, options)
-      .then(this._checkResponse)
-      .then((res) => res.json());
+    return fetch(url, options).then(this.renderResult);
   }
 
   renderResult = (res) => {
@@ -52,22 +50,22 @@ export default class Api {
     });
   }
 
-  fetchDeleteCard(cardId) {
-    return this._request(`${this._baseUrl}/cards/${cardId}`, {
+  fetchDeleteCard(getId) {
+    return this._request(`${this._baseUrl}/cards/${getId}`, {
       method: "DELETE",
       headers: this._headers,
     });
   }
 
-  fetchLikeCard(cardId) {
-    return this._request(`${this._baseUrl}/cards/${cardId}/likes`, {
+  fetchLikeCard(getId) {
+    return this._request(`${this._baseUrl}/cards/${getId}/likes`, {
       method: "PUT",
       headers: this._headers,
     });
   }
 
-  fetchDisLikeCard(cardId) {
-    return this._request(`${this._baseUrl}/cards/${cardId}/likes`, {
+  fetchDisLikeCard(getId) {
+    return this._request(`${this._baseUrl}/cards/${getId}/likes`, {
       method: "DELETE",
       headers: this._headers,
     });
