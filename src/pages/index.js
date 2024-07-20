@@ -7,7 +7,7 @@ import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 import UserInfo from "../components/UserInfo.js";
-import { initialCards, validationSettings } from "../utils/utils.js";
+import { validationSettings } from "../utils/utils.js";
 import Api from "../components/Api.js";
 
 // DOM Elements
@@ -44,7 +44,7 @@ api
     // Initialize Card List
     cardList = new Section(
       {
-        items: [...initialCards, ...card],
+        items: [...card],
         renderer: createCard,
       },
       ".gallery__cards"
@@ -195,7 +195,6 @@ function handleDeleteClick(cardElement) {
 
 // Handle Like Click
 function handleLikeClick(cardElement) {
-  console.log("Like button clicked for card:", cardElement);
   if (cardElement.getLikes()) {
     api
       .fetchDisLikeCard(cardElement.getId())
