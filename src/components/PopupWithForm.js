@@ -20,7 +20,6 @@ export default class PopupWithForm extends Popup {
 
   setInputValues(data) {
     this._inputList.forEach((input) => {
-      // Here you insert the `value` by the `name` of the input
       input.value = data[input.name];
     });
   }

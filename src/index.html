@@ -37,22 +37,29 @@
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
+
         <!-- Gallery Section -->
         <section class="gallery page__section">
           <ul class="gallery__cards"></ul>
         </section>
       </main>
+
       <!-- Footer Section -->
       <footer class="footer">
         <p class="footer__copyright">&copy; 2024 Around The U.S.</p>
       </footer>
     </div>
+
     <!-- Profile Edit Modal -->
-    <div class="modal" id="profileEditModal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close" type="button"></button>
+        <button
+          class="modal__close"
+          id="profile-edit-close"
+          type="button"
+        ></button>
         <h3 class="modal__heading">Edit Profile</h3>
-        <form class="modal__form">
+        <form class="modal__form" id="edit-profile-form">
           <input
             class="modal__input"
             type="text"
@@ -63,7 +70,10 @@
             minlength="2"
             required
           />
-          <span class="modal__error" id="profile-title-input-error"></span>
+
+          <div class="modal__error-container">
+            <span class="modal__error" id="profile-title-input-error"></span>
+          </div>
           <input
             class="modal__input"
             type="text"
@@ -74,10 +84,12 @@
             minlength="2"
             required
           />
-          <span
-            class="modal__error"
-            id="profile-description-input-error"
-          ></span>
+          <div class="modal__error-container">
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
+          </div>
           <button
             class="modal__button modal__button_disabled"
             disable
@@ -88,10 +100,16 @@
         </form>
       </div>
     </div>
+
     <!-- Add Card Modal -->
     <div class="modal" id="add-card-modal">
       <div class="modal__container">
-        <button class="modal__close" type="button" disable></button>
+        <button
+          class="modal__close"
+          id="modal-add-close"
+          type="button"
+          disable
+        ></button>
         <h3 class="modal__heading">New Place</h3>
         <form class="modal__form" id="add-card-form">
           <input
@@ -104,9 +122,9 @@
             minlength="1"
             required
           />
-
-          <span class="modal__error" id="add-modal-title-error"></span>
-
+          <div class="modal__error-container">
+            <span class="modal__error" id="add-modal-title-error"> </span>
+          </div>
           <input
             class="modal__input modal__input_type_url"
             type="url"
@@ -115,9 +133,9 @@
             id="add-modal-url"
             required
           />
-
-          <span class="modal__error" id="add-modal-url-error"></span>
-
+          <div class="modal__error-container">
+            <span class="modal__error" id="add-modal-url-error"></span>
+          </div>
           <button
             class="modal__button modal__button_disabled"
             type="submit"
@@ -131,7 +149,9 @@
 
     <!-- Preview Picture Modal -->
     <div class="modal" id="preview-picture-modal">
-      <div class="modal__picture_container">
+      <div
+        class="modal__container modal__container_preview preview__modal-wrapper"
+      >
         <img src="" alt="" class="modal__picture" id="preview-zoom" />
         <button
           class="modal__close"
@@ -139,7 +159,7 @@
           type="button"
         ></button>
 
-        <h3 class="modal_sub-heading" id="modal__image-text"></h3>
+        <h3 class="preview__modal-caption" id="modal__image-text"></h3>
       </div>
     </div>
 
@@ -156,10 +176,15 @@
     </template>
 
     <!-- Confirm Modal -->
-    <div class="modal" id="confirm-modal">
+    <div class="modal modal_type_delete" id="confirm-modal">
       <div class="modal__container">
-        <button class="modal__close" type="button" aria-label="close"></button>
-        <h2 class="modal__heading_confirm">Are you sure?</h2>
+        <button
+          class="modal__close"
+          id="delete-confirmation-close"
+          type="button"
+          aria-label="close"
+        ></button>
+        <h2 class="modal__heading">Are you sure?</h2>
         <form class="modal__form" id="confirm-form">
           <button class="modal__button" type="submit" aria-label="submit">
             Yes
@@ -172,7 +197,7 @@
     <div class="modal" id="picture-modal">
       <div class="modal__container">
         <button class="modal__close" type="button" aria-label="close"></button>
-        <h2 class="modal__heading-confirm">Change Profile Picture</h2>
+        <h2 class="modal__heading">Change Profile Picture</h2>
         <form class="modal__form" id="change-profile-form">
           <div class="modal__form-field">
             <input
@@ -183,7 +208,9 @@
               placeholder="Profile Picture URL"
               required
             />
-            <span class="modal__error" id="profile-url-error"></span>
+            <div class="modal__error-container">
+              <span class="modal__error" id="profile-url-error"></span>
+            </div>
           </div>
           <button
             class="modal__button modal__button_disabled"

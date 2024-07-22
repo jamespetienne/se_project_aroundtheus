@@ -13,6 +13,6 @@ export default class Section {
 
   addItem(item) {
     const newCard = this._renderer(item);
-    this._container.append(newCard);
+    this._container.prepend(newCard);
   }
 }

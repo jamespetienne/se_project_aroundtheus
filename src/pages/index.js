@@ -11,7 +11,7 @@ import { validationSettings } from "../utils/utils.js";
 import Api from "../components/Api.js";
 
 // DOM Elements
-const profileEditModal = document.querySelector("#profileEditModal");
+const profileEditModal = document.querySelector("#profile-edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
 const addCardFormElement = addCardModal.querySelector(".modal__form");
 const avatarFormElement = document.querySelector("#change-profile-form");
@@ -155,7 +155,7 @@ function handlePreviewPicture(cardData) {
 
 // Initialize Profile Popup Form
 const profilePopupForm = new PopupWithForm(
-  "#profileEditModal",
+  "#profile-edit-modal",
   handleProfileEditSubmit
 );
 profilePopupForm.setEventListeners();
