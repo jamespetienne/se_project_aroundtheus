@@ -10,7 +10,40 @@
   border-radius: 50%;
   object-fit: cover;
   background-position: center;
+  margin-right: 24px;
+}
+
+.profile__avatar {
+  position: relative;
+  height: 120px;
+  width: 120px;
   margin-right: 30px;
+}
+
+.profile__avatar:hover .profile__image {
+  opacity: 0.4;
+}
+
+.profile-image__edit-button {
+  background: transparent url(../images/profile-edit-button.svg) center
+    no-repeat;
+  border: none;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.profile-image__edit-button:hover {
+  opacity: 1;
 }
 
 .profile__info {
@@ -34,7 +67,7 @@
 }
 
 .profile__edit-button {
-  background: transparent url(../images/edit\ inactive.svg) center no-repeat;
+  background: transparent url(../images/edit-inactive.svg) center no-repeat;
   height: 24px;
   width: 24px;
   grid-area: button;
@@ -59,7 +92,7 @@
 }
 
 .profile__add-button {
-  background: transparent url(../images/add\ inactive.svg) center no-repeat;
+  background: transparent url(../images/add-inactive.svg) center no-repeat;
   width: 150px;
   height: 50px;
   margin-left: auto;
@@ -124,11 +157,9 @@
     justify-content: center;
     margin: 0 auto;
   }
-  .profile__image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
+
+  .profile__avatar {
+    margin-right: 0px;
   }
 
   .profile__info {

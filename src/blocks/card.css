@@ -1,33 +1,15 @@
 .card {
   display: flex;
   flex-direction: column;
-  list-style: none;
+  list-style-type: none;
   border-radius: 10px;
   overflow: hidden;
 }
-
 .card__image {
   width: 282px;
   height: 282px;
   object-fit: cover;
 }
-
-.card__trash-button {
-  background: transparent url("../images/Trash.svg") center no-repeat;
-  width: 18px;
-  height: 19.3px;
-  border: none;
-  position: absolute;
-  margin-top: 18px;
-  margin-left: 249px;
-}
-
-.card__trash-button:hover {
-  opacity: 0.5;
-  transition: opacity 0.5s;
-  cursor: pointer;
-}
-
 .card__description {
   display: flex;
   align-items: center;
@@ -48,9 +30,9 @@
 }
 
 .card__like-button {
-  background: transparent url("../images/like\ inactive.svg") center no-repeat;
-  width: 21px;
+  background: transparent url("../images/like-inactive.svg") center no-repeat;
   height: 18px;
+  width: 21px;
   border: none;
 }
 
@@ -59,6 +41,22 @@
 }
 
 .card__like-button:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.card__trash-button {
+  background: transparent url("../images/Trash.svg") center no-repeat;
+  width: 18px;
+  height: 19.3px;
+  border: none;
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 249px;
+}
+
+.card__trash-button:hover {
   opacity: 0.5;
   transition: opacity 0.5s;
   cursor: pointer;
