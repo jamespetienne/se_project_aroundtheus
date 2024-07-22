@@ -101,8 +101,6 @@ profileImagePopupForm.setEventListeners();
 profileImageEditButton.addEventListener("click", (evt) => {
   evt.preventDefault();
   profileImagePopupForm.open();
-  addFormValidator.disableButton();
-  avatarFormElement.reset();
 });
 
 // Profile Picture Edit Handler
