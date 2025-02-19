@@ -38,15 +38,16 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 
 - ### Desktop
 
-  <img src="images/Demo/ATUS Desktop.png" width="500">
+  <img width="791" alt="Screenshot 2025-02-18 at 9 21 29 PM" src="https://github.com/user-attachments/assets/5e210f38-98cb-4c41-8086-e5d68def8522" />
+
 
 - ### Tablet
 
-  <img src="images/Demo/ATUS Tablet.png" width="300">
+ <img width="513" alt="Screenshot 2025-02-18 at 9 31 48 PM" src="https://github.com/user-attachments/assets/49a86ca4-e277-46f8-9dd8-a09dd92232b3" />
 
 - ### Mobile
 
-  <img src="images/Demo/ATUS Mobile.png" width="200">
+  ![jamespetienne github io_se_project_aroundtheus_(iPhone 12 Pro)](https://github.com/user-attachments/assets/683fb480-35e8-40b8-bf3b-4e15dcbdeac4)
 
 ## Responsive Design
 
