@@ -52,10 +52,6 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 
 ![Responsive-Website](./images/Demo/WebsiteResponsiveness-ezgif.com-video-to-gif-converter.gif)
 
-## More About Website Video
-
-- https://drive.google.com/file/d/1N__9t-Vyos5CVQD-0OYqRdsSzhgrFRq4/view?usp=drive_link
-
 ## Credits
 
 - **Around The U.S.**: © 2022 Around The U.S. - Original concept and design.
