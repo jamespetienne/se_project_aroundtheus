@@ -38,16 +38,15 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 
 - ### Desktop
 
-  <img width="791" alt="Screenshot 2025-02-18 at 9 21 29 PM" src="https://github.com/user-attachments/assets/5e210f38-98cb-4c41-8086-e5d68def8522" />
-
+<img width="791" alt="Screenshot 2025-02-18 at 9 21 29 PM" src="https://github.com/user-attachments/assets/5e210f38-98cb-4c41-8086-e5d68def8522" />
 
 - ### Tablet
 
- <img width="513" alt="Screenshot 2025-02-18 at 9 31 48 PM" src="https://github.com/user-attachments/assets/49a86ca4-e277-46f8-9dd8-a09dd92232b3" />
+<img width="513" alt="Screenshot 2025-02-18 at 9 31 48 PM" src="https://github.com/user-attachments/assets/49a86ca4-e277-46f8-9dd8-a09dd92232b3" />
 
 - ### Mobile
 
-  <img src="https://github.com/user-attachments/assets/683fb480-35e8-40b8-bf3b-4e15dcbdeac4" alt="jamespetienne github io_se_project_aroundtheus_(iPhone 12 Pro)" width="400">
+<img src="https://github.com/user-attachments/assets/683fb480-35e8-40b8-bf3b-4e15dcbdeac4" alt="jamespetienne github io_se_project_aroundtheus_(iPhone 12 Pro)" width="400">
 
 ## Credits
 
