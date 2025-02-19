@@ -47,8 +47,7 @@ Simply open the `index.html` file in a web browser to view the website. All styl
 
 - ### Mobile
 
-  ![jamespetienne github io_se_project_aroundtheus_(iPhone 12 Pro)](https://github.com/user-attachments/assets/683fb480-35e8-40b8-bf3b-4e15dcbdeac4)
-
+  <img src="https://github.com/user-attachments/assets/683fb480-35e8-40b8-bf3b-4e15dcbdeac4" alt="jamespetienne github io_se_project_aroundtheus_(iPhone 12 Pro)" width="400">
 
 ## Credits
 
